@@ -64,7 +64,7 @@ subjectAltName   = @client_alt_names
 [ server_extensions ]
 basicConstraints = CA:false
 keyUsage         = digitalSignature,keyEncipherment
-extendedKeyUsage = serverAuth
+extendedKeyUsage = clientAuth,serverAuth
 subjectAltName   = @server_alt_names
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer
@@ -73,8 +73,18 @@ authorityKeyIdentifier = keyid,issuer
 DNS.1 = $common_name
 DNS.2 = $client_alt_name
 DNS.3 = localhost
+IP.1 = 192.168.56.11
+IP.2 = 192.168.56.12
+IP.3 = 192.168.56.13
+IP.4 = 192.168.56.21
+IP.5 = 192.168.56.22
 
 [ server_alt_names ]
 DNS.1 = $common_name
 DNS.2 = $server_alt_name
 DNS.3 = localhost
+IP.1 = 192.168.56.11
+IP.2 = 192.168.56.12
+IP.3 = 192.168.56.13
+IP.4 = 192.168.56.21
+IP.5 = 192.168.56.22
